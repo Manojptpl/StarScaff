@@ -1,0 +1,86 @@
+﻿* {
+    box-sizing:border-box;
+}
+html,body {
+    overflow-x:hidden;
+    height:100%;
+}
+body {
+    font-family:Arial, sans-serif;
+    background:#fff;
+    padding:0;
+    margin:0;
+}
+.header {    
+    background:#ee5253;
+    width:100%;
+    height:60px;
+    position:fixed;
+    z-index:10;
+}
+
+.main {
+    height:100%;
+    margin-top:60px;
+    padding:10px 50px;
+}
+#sidebarmenu {
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    width:250px;
+    margin-top:60px;
+    background:#2e86de;
+    transform:translateX(-250px);
+    transition:transform 250ms ease-in-out;
+}
+#openSidebarMenu:checked ~#sidebarmenu{
+    transform:translateX(0px);
+
+}
+.menu {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.main li {
+    color:#f1c40f;
+    border-bottom:1px solid #fff;
+}
+.menu li a {
+    color:#fff;
+    display:block;
+    text-decoration:none;
+    text-transform:uppercase;
+    padding:20px;
+}
+.sidebarIconToggle {    
+    width:22px;
+    height:22px;
+    position:absolute;
+    z-index:20;
+    top:22px;
+    left:15px;
+    cursor:pointer;
+}
+.spinner {
+    height:3px;
+    background:#fff;
+    transition:all 0.3s;
+}
+    .spinner.middle,
+    .spinner.bottom {
+        margin-top:3px;
+    }
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.middle {
+    opacity:0;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.top {
+    transform:rotate(135deg);
+    margin-top:8px;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.bottom {
+    transform:rotate(-135deg);
+    margin-top:-9px;
+}

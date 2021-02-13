@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: linear-gradient(#3f51b5,#000);
+        }
+
+        .main {
+            width: 350px;
+            height: 100vh;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: #fdfdfd;
+        }
+
+        .header {
+            width: 100%;
+            padding: 10px 0;
+            background: #f9f9f9;
+            box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .main-text {
+            width: 300px;
+            margin: 50px auto 0;
+            color: #777;
+        }
+
+            .main-text h2 {
+                margin-bottom: 20px;
+            }
+
+        .footer-menu {
+            width: 100%;
+            position: absolute;
+            bottom: -10px;
+            padding: 17px 5px;
+            background: #f9f9f9;
+            box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+        }
+
+            .footer-menu img {
+                width: 20px;
+                margin: 0 32px;
+                cursor: pointer;
+            }
+
+        .swiper-container {
+            height: 350px;
+        }
+
+        .swiper-wrapper {
+            align-items: center;
+        }
+
+        .swiper-slide {
+            width: 200px;
+            height: 250px;
+            border-radius: 7px;
+        }
+
+            .swiper-slide img {
+                width: 200px;
+                height: 250px;
+                border-radius: 7px;
+            }
+
+        .swiper-slide-active {
+            transform: scale(1.2);
+            transition: .4s;
+        }
+
+        .info {
+            width: 100%;
+            padding: 8px 0;
+            background: rgba(0,0,0,0.6);
+            position: absolute;
+            bottom: 0;
+            text-align: justify;
+            border-radius: 0 0 5px 5px;
+        }
+
+            .info h3 {
+                font-size: 15px;
+                margin-left: 7px;
+                font-weight: 100;
+                color: #fff;
+            }
+
+            .info p {
+                font-size: 10px;
+                margin-left: 7px;
+                color: #fff;
+            }
+
+            .info a {
+                text-decoration: none;
+                color: #fff;
+                float: right;
+                margin-right: 7px;
+                margin-top: -28px;
+                border: 1px solid #fff;
+                border-radius: 20px;
+                font-size: 10px;
+                padding: 2px 8px;
+            }
+
+        .swiper-pagination {
+            bottom: 0 !important;
+        }
+    </style>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 40,
+      centeredSlides: true,
+      grabCursor:true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+
+    });
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="main-text">
+            <h2>OUR TEAM MEMBERS</h2>
+            <small>
+                Manav Kalyan Seva Samiti
+            </small>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="~/Assets/Images/team1.jpg" alt="" />
+                    <div class="info">
+                        <h3>Manoj Kumar</h3>
+                        <p>Founder & CEO </p>
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/Assets/Images/team1.jpg" alt="" />
+                    <div class="info">
+                        <h3>Manoj Kumar</h3>
+                        <p>Founder & CEO </p>
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/Assets/Images/team2.jpg" alt="" />
+                    <div class="info">
+                        <h3>Manoj Kumar</h3>
+                        <p>Founder & CEO </p>
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/Assets/Images/team3.jpg" alt="" />
+                    <div class="info">
+                        <h3>Manoj Kumar</h3>
+                        <p>Founder & CEO </p>
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="~/Assets/Images/team1.jpg" alt="" />
+                    <div class="info">
+                        <h3>Manoj Kumar</h3>
+                        <p>Founder & CEO </p>
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="footer-menu">
+            <img src="~/Assets/Images/team1.jpg" />
+            <img src="~/Assets/Images/team2.jpg" />
+            <img src="~/Assets/Images/team3.jpg" />
+            <img src="~/Assets/Images/team1.jpg" />
+        </div>
+    </div>
+</body>
+</html>

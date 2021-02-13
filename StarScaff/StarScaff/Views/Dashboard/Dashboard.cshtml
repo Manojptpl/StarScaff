@@ -1,0 +1,99 @@
+﻿<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<style type="text/css">
+    .boxFirst {
+        width: 100px;
+        height: 100px;
+        margin-left: 200px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var ctx = document.getElementById('mypieChart').getContext('2d');
+
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'pie',
+
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#f39c12", "#f1c40f"],
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [20, 10, 35, 20, 30, 45]
+                }]
+            },
+
+            // Configuration options go here
+            options: Option
+        });
+
+        var ctx_bar = document.getElementById('mybarChart');
+
+        var chart_bar = new Chart(ctx_bar, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#f39c12", "#f1c40f"],
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [20, 10, 35, 20, 30, 45]
+                }]
+            },
+
+            // Configuration options go here
+            options: Option
+        });
+
+        var ctx_line = document.getElementById('mylineChart');
+
+        var chart_line = new Chart(ctx_line, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: ["#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#f39c12", "#f1c40f"],
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [20, 10, 35, 20, 30, 45]
+                }]
+            },
+
+            // Configuration options go here
+            options: Option
+        });
+
+
+    });
+
+
+</script>
+
+<div class="boxFirst">
+    <h4>Manoj</h4>
+</div>
+<div class="container">
+    <div class="row" style="width:500px;height:400px; float:left;margin-left:40px;margin-right:40px;">
+        <div class="col-lg-6">
+            <canvas id="mypieChart"></canvas>
+        </div>
+    </div>
+    <div class="row" style="width:500px;height:400px; float:left;margin-right:40px;">
+        <div class="col-lg-6">
+            <canvas id="mybarChart"></canvas>
+        </div>
+    </div>
+    <div class="row" style="margin-top:30px;">
+        <div class="col-lg-12">
+            <canvas id="mylineChart"></canvas>
+        </div>
+    </div>
+</div>
